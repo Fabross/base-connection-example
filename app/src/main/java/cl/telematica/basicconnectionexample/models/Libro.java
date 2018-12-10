@@ -15,6 +15,16 @@ public class Libro {
     private String genero;
     private int autor;
 
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    private String photo;
+
     public void setId(int id){
         this.id = id;
     }
@@ -71,6 +81,7 @@ public class Libro {
                 libro.setEditorial(obj.getString("editorial"));
                 libro.setGenero(obj.getString("genero"));
                 libro.setAutor(obj.getInt("autor"));
+                libro.setPhoto(obj.getString("photo"));
 
                 lista.add(libro);
             }
